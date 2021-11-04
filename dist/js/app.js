@@ -279,7 +279,7 @@ function trimString(el, stringLength = 0) {
         let dataSlider = new Swiper(promo.querySelector('.swiper-container'), {
             effect: 'fade',
             autoplay: {
-                delay: 4000,
+                delay: 10000,
                 disableOnInteraction: false,
             },
             
