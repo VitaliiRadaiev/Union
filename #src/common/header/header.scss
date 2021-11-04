@@ -11,6 +11,10 @@
         background-color: $mainColor;
     }
 
+    &.is-scrolling {
+        transform: translateY(-100%);
+    }
+
     &__body {
         min-height: 100px;
         display: flex;

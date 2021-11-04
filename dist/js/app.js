@@ -256,9 +256,23 @@ function trimString(el, stringLength = 0) {
 	{
     let header = document.querySelector('.header');
     if(header) {
+        let isScroll = window.pageYOffset;
         window.addEventListener('scroll', () => {
             header.classList.toggle('is-scroll', window.pageYOffset > 50);
+
+            if(window.pageYOffset > isScroll) {
+                if(window.pageYOffset > header.clientHeight) {
+                    header.classList.add('is-scrolling');
+                    isScroll = window.pageYOffset;
+                }
+            } else if(window.pageYOffset < isScroll) {
+                header.classList.remove('is-scrolling');
+                isScroll = window.pageYOffset;
+            }
         })
+
+
+
 
         let menu = document.querySelector('.menu');
         let burger = document.querySelector('.header__burger');
@@ -294,6 +308,64 @@ function trimString(el, stringLength = 0) {
     }
 }
 ;
+	{
+    let mainList = document.querySelector('.main-list');
+    if (mainList) {
+        let items = Array.from(document.querySelectorAll('.main-list li'));
+
+        let arrStak = [];
+
+        setInterval(() => {
+
+            if (arrStak.length) {
+                let arr = arrStak;
+                arrStak = [];
+                let count = 0;
+                let id = setInterval(() => {
+                    if (count >= arr.length) {
+                        clearInterval(id);
+                        return;
+                    }
+                    arr[count]();
+                    count++;
+
+                }, 300);
+            }
+        }, 100)
+
+        const colorThief = new ColorThief();
+        const mainListHandler = () => {
+            items.forEach(item => {
+                
+                if (item.getBoundingClientRect().top < document.documentElement.clientHeight) {
+                    if (!item.classList.contains('loaded')) {
+                        item.classList.add('loaded');
+                        arrStak.push(() => {
+                            item.classList.add('show');
+                            let loader = document.createElement('div');
+                            loader.className = 'loader';
+                            let bg = item.querySelector('.main-list__bg');
+                            let lazyImage = item.querySelector('.main-list__bg img');
+                            lazyImage.after(loader);
+                            lazyImage.src = lazyImage.dataset.src;
+
+                            lazyImage.onload = () => {
+                                loader.remove();
+                                bg.style.background = `rgb(${colorThief.getColor(lazyImage).join(',')})`;
+                                
+                                setTimeout(() => {
+                                    lazyImage.classList.add('show');
+                                }, 1000)
+                            }
+                        })
+                    }
+                }
+            })
+        }
+        mainListHandler();
+        window.addEventListener('scroll', mainListHandler);
+    }
+};
 	
 	let homaPage = document.querySelector('.home-page');
 if(homaPage) {
@@ -308,7 +380,7 @@ if(homaPage) {
         delay: 800,
     })
     .add({
-        targets:['.menu__link'],
+        targets:['.menu__list li'],
         opacity: [0, 1],
         translateY: ['-100%', '0%'],
         delay: (el, i) => 100 * i,

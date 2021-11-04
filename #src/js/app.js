@@ -29,6 +29,7 @@ window.addEventListener('load', function () {
 	@@include('_function.js');
 	@@include('../common/header/header.js');
 	@@include('../common/promo/promo.js');
+	@@include('../common/main-list/main-list.js');
 	
 	@@include('./pages/home.js');
 });

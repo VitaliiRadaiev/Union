@@ -10,6 +10,39 @@
             border-color: $mainColor;
             border-left: 4px solid transparent;
         }
+
+
+        &:nth-child(even) {
+            & .promo__bg {
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+
+            &.swiper-slide-active {
+                & .promo__bg {
+                    & img {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            & .promo__bg {
+                & img {
+                    transform: scale(1);
+                }
+            }
+
+            &.swiper-slide-active {
+                & .promo__bg {
+                    & img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
     }
 
     &__bg {
@@ -19,6 +52,7 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+        overflow: hidden;
 
         &:before {
             position: absolute;
@@ -35,6 +69,10 @@
                 rgba(19, 19, 19, 0.0001) 30.22%,
                 rgba(19, 19, 19, 0.6) 73.67%
             );
+        }
+
+        & img {
+            transition: all 10s ease;
         }
     }
 

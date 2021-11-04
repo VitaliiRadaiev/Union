@@ -11,7 +11,7 @@ if(homaPage) {
         delay: 800,
     })
     .add({
-        targets:['.menu__link'],
+        targets:['.menu__list li'],
         opacity: [0, 1],
         translateY: ['-100%', '0%'],
         delay: (el, i) => 100 * i,

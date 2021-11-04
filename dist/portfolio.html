@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNION</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+		
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header dark">
+    <div class="header__body container-lg">
+        <div class="header__logo logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav class="header__menu menu">
+            <div class="menu__head">
+                <div class="menu__logo">
+                    <a href="#">
+                        <img src="img/logo/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu__close">
+                    <img src="img/icons/close-white.svg" alt="">
+                </div>
+            </div>
+            <div class="menu__scroll-box">
+                <ul class="menu__list">                                
+                    <li>
+                        <a href="#" class="menu__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Team</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">News</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header__copy" data-da="menu__scroll-box,last,991.98">
+            中文 (中国)
+        </div>
+        <div class="header__burger">
+           <img src="img/icons/burger.svg" alt="">
+        </div> 
+    </div>
+</header>
+
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page portfolio-page">
+        <section class="portfolio">
+            <div class="container-lg">
+                <ul class="main-list">
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-1.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    kraft heinz
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-2.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    worksp@ce shanghai 2021
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-3.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    Kościuszki 39
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-4.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    Coasis Resorts
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-5.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    Sośnica Resort
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-6.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    celec office in chengdu
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-7.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    manulife office and training center in chengdu
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-8.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    boston scientific hq office in shanghai
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-9.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    on running office and showroom in shanghai
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-10.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    milliken & co showroom and office in shanghai
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-11.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    Nu Skin New PC Plant
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-12.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    boston scientific training center in chengdu
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-13.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    shooting range
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-14.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    boston scientific booth at ciie 2019
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-15.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    boston scientific institute for advancing science
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-16.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    ARCC Shanghai office
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-17.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    Sherwin Williams Shanghai office
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-18.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    boston scientific t-3 beijing r&d center and office
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-19.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    Strawberry Hill
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-list__item">
+                            <div class="main-list__bg">
+                                <img data-src="img/photo/portfolio-img-20.jpg" alt="">
+                            </div>
+                            <div class="main-list__body">
+                                <div class="main-list__title">
+                                    Inch bar
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer ">
+    <div class="footer__body container-lg">
+         <div>Copyright 2021 by ©UNION</div>
+         <div><img src="img/photo/coatofchina.png" alt=""> 浙公网安备 31010602003239号</div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+
+</body>
+
+</html>
