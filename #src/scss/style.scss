@@ -12,9 +12,8 @@
 // ==== // FONTS ===========================================================================================
 
 // ==== VARS ===========================================================================================
-@import "vars"; 
+@import "vars";
 // ==== // VARS ===========================================================================================
-
 
 // ==== Normalize ===========================================================================================
 @import "normalize";
@@ -46,10 +45,8 @@
 // ==== BORDER ===========================================================================================
 
 // ==== POPUP ===========================================================================================
-//@import "common/popup/popup";
+@import "../common/popup/popup";
 // ==== // POPUP ===========================================================================================
-
-
 
 * {
 	padding: 0px;
@@ -95,7 +92,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
 	font-size: 1.4rem;
-	transition: opacity .8s ease;
+	transition: opacity 0.8s ease;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -105,7 +102,6 @@ body {
 		overflow: hidden;
 	}
 }
-
 
 input,
 button,
@@ -155,12 +151,9 @@ textarea {
 	appearance: none;
 }
 
-
-
 .center {
 	text-align: center;
 }
-
 
 ._page {
 	flex: 1 1 auto;
@@ -170,9 +163,13 @@ textarea {
 }
 
 .container-lg {
-	max-width: 1760px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 80px;
+
+	@media (max-width: $md1+px) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 
 	@media (max-width: $md3+px) {
 		padding-left: 30px;
@@ -193,7 +190,7 @@ textarea {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
-	
+
 	@media (max-width: $md4+px) {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -212,68 +209,87 @@ textarea {
 	}
 }
 
-
-
 // === title ========================================================================
 .title-1 {
-
 }
 .title-2 {
+	font-size: 44px;
+	line-height: 1.227em;
 
+	@media (max-width: 575.98px) {
+		font-size: 24px;
+		line-height: 29px;
+	}
 }
 
 .title-3 {
-
 }
 
 .title-4 {
+	font-size: 26px;
+	line-height: 1.23em;
 
+	@media (max-width: 575.98px) {
+		font-size: 18px;
+		line-height: 22px;
+	}
 }
 
 .title-5 {
-
-
 }
 .title-6 {
-
-
 }
 
 .suptitle {
-
 }
 .subtitle {
-
 }
 
 .text {
-
 }
 // === and title ========================================================================
 
-
-
 // === btn ========================================================================
 .btn-default {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $mainColor;
+	text-align: center;
+	min-height: 50px;
+	padding: 10px 50px;
+	border-radius: 100px;
+	transition: all 0.3s ease;
+	font-size: 16px;
+	line-height: 1.2em;
+	color: $textColorLight;
+	cursor: pointer;
+	align-self: flex-start;
+	@media (min-width: 992px) {
+		&:hover {
+			background-color: rgba($mainColor, 0.9);
+		}
+	}
 
+	@media (max-width: 575.98px) {
+		font-size: 13px;
+		padding: 8px 29px;
+		min-height: 40px;
+	}
 }
 
 button.btn-default {
-	
 }
 
 // === and btn ========================================================================
 
 .input {
-
 }
 
 .textarea {
-
 }
 
 .link {
-
 }
 
 .loader {
@@ -287,56 +303,67 @@ button.btn-default {
 	border-radius: 50%;
 	border: 2px solid rgba(#fff, 0.5);
 	border-bottom: 2px solid #fff;
-	animation: loaderRotate .8s linear infinite;
+	animation: loaderRotate 0.8s linear infinite;
 }
 @keyframes loaderRotate {
 	from {
 		transform: translate(-50%, -50%) rotate(0deg);
 	}
-	to {transform: translate(-50%, -50%) rotate(360deg);}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
 }
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
-	& h1 {}
-	& h2 {
+	font-size: 16px;
+	line-height: 34px;
 
+	@media (max-width: 575.98px) {
+		font-size: 13px;
+		line-height: 22px;
 	}
-	& h3 {}
-	& h4 {}
+
+	& h1 {
+	}
+	& h2 {
+	}
+	& h3 {
+	}
+	& h4 {
+	}
 
 	& h5 {
-
 	}
-	& h6 {}
+	& h6 {
+	}
 
 	& p {
-
+		margin-bottom: 2.2em;
 	}
 
 	& ul {
-
 	}
 
-	& ol {}
+	& ol {
+	}
 
-	& figure {}
-
+	& figure {
+	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
-
 
 // ==== BLOCKS =====================================================
 @import "../common/header/header";
 @import "../common/footer/footer";
 @import "../common/promo/promo";
 @import "../common/main-list/main-list";
+@import "../common/projects-slider/projects-slider";
+@import "../common/popup/popup-gallery";
 // ==== BLOCKS =====================================================
 
-
 // ==== PAGES =====================================================
-	@import "pages/home";
-	@import "pages/portfolio";
+@import "pages/home";
+@import "pages/portfolio";
+@import "pages/project-detail";
 // ==== AND PAGES =====================================================
-
-

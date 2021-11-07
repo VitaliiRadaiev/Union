@@ -30,6 +30,9 @@ window.addEventListener('load', function () {
 	@@include('../common/header/header.js');
 	@@include('../common/promo/promo.js');
 	@@include('../common/main-list/main-list.js');
+	@@include('../common/projects-slider/projects-slider.js');
+	@@include('../common/popup/popup.js');
+	@@include('../common/popup/popup-gallery.js');
 	
 	@@include('./pages/home.js');
 });

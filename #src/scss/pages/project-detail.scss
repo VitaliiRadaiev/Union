@@ -1,0 +1,187 @@
+.hero {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        @media (max-width: 575.98px) {
+            position: relative;
+            margin-bottom: 30px;
+            height: 180px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(
+                180deg,
+                rgba(19, 19, 19, 0.4) 8.97%,
+                rgba(19, 19, 19, 0.0001) 18.77%,
+                rgba(19, 19, 19, 0.0001) 30.22%,
+                rgba(19, 19, 19, 0.6) 73.67%
+            );
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 900px;
+        padding-top: 150px;
+        padding-bottom: 98px;
+        color: $textColorLight;
+
+        @media (max-width: $md3+px) {
+            padding-top: 90px;
+            min-height: 600px;
+        }
+
+        @media (max-width: 575.98px) {
+            padding-top: 0;
+            padding-bottom: 0;
+            min-height: auto;
+            color: $textColor;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        @media (max-width: 575.98px) {
+            color: $textColor;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(#fff, 0.5);
+        margin-bottom: 40px;
+
+        @media (max-width: 575.98px) {
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 20px;
+            color: #8d8d8d;
+        }
+    }
+}
+
+.project-info {
+    padding: 100px 0;
+    @media (max-width: $md3+px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 30px 0 40px;
+    }
+    &__body {
+        @media (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__col-1 {
+        padding-right: 40px;
+        flex: 1 1 auto;
+        max-width: 760px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 80px;
+            max-width: none;
+            padding-right: 0;
+        }
+
+        @media (max-width: 575.98px) {
+            margin-bottom: 30px;
+        }
+
+        & .text-content {
+            & > * {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__col-2 {
+        flex: 0 0 40.47%;
+    }
+}
+
+.table {
+    &__title {
+        padding-bottom: 26px;
+        margin-bottom: 52px;
+        position: relative;
+
+        @media (max-width: 575.98px) {
+            padding-bottom: 14px;
+            margin-bottom: 20px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: #e8e8e8;
+        }
+    }
+
+    & table {
+        width: 100%;
+        @media (max-width: 575.98px) {
+            display: block;
+        }
+        & tr {
+            @media (max-width: 575.98px) {
+                display: block;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        & td {
+            padding: 7.5px 0;
+            font-size: 16px;
+            line-height: 20px;
+
+            @media (max-width: 575.98px) {
+                font-size: 13px;
+                line-height: 16px;
+                padding: 0;
+                display: block;
+            }
+
+            &:first-child {
+                color: rgba($textColor, 0.5);
+                padding-right: 15px;
+            }
+
+            @media (min-width: 576px) {
+                &:last-child {
+                    text-align: right;
+                }
+            }
+
+        }
+    }
+}
