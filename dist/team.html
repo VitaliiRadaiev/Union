@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNION</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+		
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header ">
+    <div class="header__body container-lg">
+        <div class="header__logo logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav class="header__menu menu">
+            <div class="menu__head">
+                <div class="menu__logo">
+                    <a href="#">
+                        <img src="img/logo/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu__close">
+                    <img src="img/icons/close-white.svg" alt="">
+                </div>
+            </div>
+            <div class="menu__scroll-box">
+                <ul class="menu__list">                                
+                    <li>
+                        <a href="#" class="menu__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Team</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">News</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header__copy" data-da="menu__scroll-box,last,991.98">
+            中文 (中国)
+        </div>
+        <div class="header__burger">
+           <img src="img/icons/burger.svg" alt="">
+        </div> 
+    </div>
+</header>
+
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page team-page">
+        <section class="team">
+            <div class="team__head ibg">
+                <img src="img/photo/team-head.jpg" alt="">
+            </div>
+            <ul class="team__list">
+                <li>
+                    <div class="team-card">
+                        <div class="team-card__photo ibg">
+                            <img src="img/photo/team-img-1.jpg" alt="">
+                        </div>
+                        <div class="team-card__body container">
+                            <div class="team-card__text-wrap text-content">
+                                <div class="team-card__scroll-wrap">
+                                    <h3>Sergey Vaskin</h3>
+                                    <div class="team-card__position">Leading Architect & Co-Founder</div>
+                                    <p>
+                                        Sergey has over ten years of experience in the industry, responsible for
+                                        delivering
+                                        conceptual design and leading an international team throughout all stages of the
+                                        project. He leads the client’s team to optimize and transform complexities into
+                                        opportunities with innovative, cost-effective, and bespoke solutions.
+                                    </p>
+                                    <div class="accordion">
+                                        <h4 class="accordion__head-title title-4">
+                                            Selected project experience
+                                        </h4>
+                                        <ul class=" _spollers _one">
+                                            <li>
+                                                <div class="accordion__title _spoller">boston scientific institute for
+                                                    advancing
+                                                    science</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit?
+                                                    Assumenda placeat quas corporis aliquid laborum nisi cumque? Debitis
+                                                    minima
+                                                    molestias harum adipisci earum aut aperiam similique, ipsa provident
+                                                    dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">milliken & co showroom and office
+                                                    in
+                                                    shanghai</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit?
+                                                    Assumenda placeat quas corporis aliquid laborum nisi cumque? Debitis
+                                                    minima
+                                                    molestias harum adipisci earum aut aperiam similique, ipsa provident
+                                                    dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">sherwin williams shanghai office
+                                                </div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit?
+                                                    Assumenda placeat quas corporis aliquid laborum nisi cumque? Debitis
+                                                    minima
+                                                    molestias harum adipisci earum aut aperiam similique, ipsa provident
+                                                    dolorem.
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="team-card">
+                        <div class="team-card__photo ibg">
+                            <img src="img/photo/team-img-2.jpg" alt="">
+                        </div>
+                        <div class="team-card__body container">
+                            <div class="team-card__text-wrap text-content">
+                                <div class="team-card__scroll-wrap">
+                                    <h3>Andrey Arkhipov</h3>
+                                    <div class="team-card__position">Head of Operations, Client service & Co-Founder
+                                    </div>
+                                    <p>
+                                        Andrey works closely with every client to achieve smooth communication between
+                                        all
+                                        the project teams. He prefers to be involved in all stages of the design process
+                                        and
+                                        enjoys forming long-term and trusting relationships.
+                                    </p>
+
+                                    <div class="accordion">
+                                        <h4 class="accordion__head-title title-4">
+                                            Selected project experience
+                                        </h4>
+                                        <ul class="_spollers _one">
+                                            <li>
+                                                <div class="accordion__title _spoller">On Running office and Showroom in
+                                                    Shanghai</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit? Assumenda placeat quas corporis aliquid laborum nisi cumque?
+                                                    Debitis minima molestias harum adipisci earum aut aperiam similique,
+                                                    ipsa provident dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">ARCC Shanghai office</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit? Assumenda placeat quas corporis aliquid laborum nisi cumque?
+                                                    Debitis minima molestias harum adipisci earum aut aperiam similique,
+                                                    ipsa provident dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">Boston Scientific T-3 Beijing R&D
+                                                    Center and Office</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit? Assumenda placeat quas corporis aliquid laborum nisi cumque?
+                                                    Debitis minima molestias harum adipisci earum aut aperiam similique,
+                                                    ipsa provident dolorem.
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="team-card">
+                        <div class="team-card__photo ibg">
+                            <img src="img/photo/team-img-3.jpg" alt="">
+                        </div>
+                        <div class="team-card__body container">
+                            <div class="team-card__text-wrap text-content">
+                                <div class="team-card__scroll-wrap">
+                                    <h3>Kasia Polus</h3>
+                                    <div class="team-card__position">Leading Architect & Co-Founder</div>
+                                    <p>
+                                        Kasia is very passionate about design, which helps her to create environments that comfort and inspire their users. With the professional skills of strategy planning, attention to detail and knowledge of sustainability Kasia fulfils the design needs of every client.
+                                    </p>
+                                    <div class="accordion">
+                                        <h4 class="accordion__head-title title-4">
+                                            Selected project experience
+                                        </h4>
+                                        <ul class=" _spollers _one">
+                                            <li>
+                                                <div class="accordion__title _spoller">kraft heinz</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit?
+                                                    Assumenda placeat quas corporis aliquid laborum nisi cumque? Debitis
+                                                    minima
+                                                    molestias harum adipisci earum aut aperiam similique, ipsa provident
+                                                    dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">coasis resorts</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit?
+                                                    Assumenda placeat quas corporis aliquid laborum nisi cumque? Debitis
+                                                    minima
+                                                    molestias harum adipisci earum aut aperiam similique, ipsa provident
+                                                    dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">boston scientific hq office in shanghai</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit?
+                                                    Assumenda placeat quas corporis aliquid laborum nisi cumque? Debitis
+                                                    minima
+                                                    molestias harum adipisci earum aut aperiam similique, ipsa provident
+                                                    dolorem.
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="team-card">
+                        <div class="team-card__photo ibg">
+                            <img src="img/photo/team-img-4.jpg" alt="">
+                        </div>
+                        <div class="team-card__body container">
+                            <div class="team-card__text-wrap text-content">
+                                <div class="team-card__scroll-wrap">
+                                    <h3>Maciek Debicki</h3>
+                                    <div class="team-card__position">Leading Architect & Co-Founder</div>
+                                    <p>
+                                        Maciek has worked on large scale architecture and interior design projects throughout Asia and Europe. He is professional at coordinating with different teams to deliver successful projects while meeting the Client’s needs related to their budget.
+                                    </p>
+
+                                    <div class="accordion">
+                                        <h4 class="accordion__head-title title-4">
+                                            Selected project experience
+                                        </h4>
+                                        <ul class="_spollers _one">
+                                            <li>
+                                                <div class="accordion__title _spoller">nu skin new pc plant shanghai</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit? Assumenda placeat quas corporis aliquid laborum nisi cumque?
+                                                    Debitis minima molestias harum adipisci earum aut aperiam similique,
+                                                    ipsa provident dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">K39</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit? Assumenda placeat quas corporis aliquid laborum nisi cumque?
+                                                    Debitis minima molestias harum adipisci earum aut aperiam similique,
+                                                    ipsa provident dolorem.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="accordion__title _spoller">Boston scientific training center in chengdu</div>
+                                                <div class="accordion__text text-content">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                                                    velit? Assumenda placeat quas corporis aliquid laborum nisi cumque?
+                                                    Debitis minima molestias harum adipisci earum aut aperiam similique,
+                                                    ipsa provident dolorem.
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer ">
+    <div class="footer__body container-lg">
+         <div>Copyright 2021 by ©UNION</div>
+         <div><img src="img/photo/coatofchina.png" alt=""> 浙公网安备 31010602003239号</div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+    <div class="popup gallery" id="popupGallery-1">
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img src="img/icons/close-white.svg" alt="">
+		</div>
+		<div class="popup_content">
+			
+			<div class="popup-gallery">
+				<div class="popup-gallery__slider" data-mobile="false">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-3.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-4.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-5.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="slider-btn slider-btn-prev"></div>
+						<div class="slider-btn slider-btn-next"></div>
+					</div>
+				</div>
+				<div class="popup-gallery__thumb">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-3.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-4.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-5.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup gallery" id="popupGallery-2">
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img src="img/icons/close-white.svg" alt="">
+		</div>
+		<div class="popup_content">
+			
+			<div class="popup-gallery">
+				<div class="popup-gallery__slider" data-mobile="false">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-3.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-4.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-5.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-18.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-19.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-20.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-21.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-22.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-23.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-24.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-25.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-26.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-27.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-28.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-29.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-30.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="slider-btn slider-btn-prev"></div>
+						<div class="slider-btn slider-btn-next"></div>
+					</div>
+				</div>
+				<div class="popup-gallery__thumb">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-3.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-4.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-5.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-18.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-19.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-20.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-21.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-22.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-23.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-24.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-25.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-26.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-27.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-28.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-29.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-30.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+
+</body>
+
+</html>

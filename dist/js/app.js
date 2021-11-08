@@ -280,9 +280,13 @@ function trimString(el, stringLength = 0) {
 
         burger.addEventListener('click', () => {
             menu.classList.add('open');
+            header.classList.add('menu-open');
+            document.body.classList.add('lock');
         })
         btnClose.addEventListener('click', () => {
             menu.classList.remove('open');
+            header.classList.remove('menu-open');
+            document.body.classList.remove('lock');
         })
     }
 };
@@ -612,6 +616,7 @@ document.addEventListener('keydown', function(e) {
         })
     }
 };
+
 	
 	let homaPage = document.querySelector('.home-page');
 if(homaPage) {
@@ -795,6 +800,24 @@ window.addEventListener('DOMContentLoaded', function () {
 		//const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	}
 }());;
+	{
+    let textContent = document.querySelector('.text-content');
+    if(textContent) {
+        let figureBoxAll = textContent.querySelectorAll('figure');
+        if(figureBoxAll.length) {
+            figureBoxAll.forEach(figure => {
+                let iframe = figure.querySelector('iframe');
+                let images = figure.querySelectorAll('img');
+                if(iframe) {
+                    figure.classList.add('iframe');
+                }
+                if(images.length > 1) {
+                    figure.classList.add('multiple');
+                }
+            })
+        }
+    }
+};
 
 	function testWebP(callback) {
 
@@ -813,4 +836,12 @@ window.addEventListener('DOMContentLoaded', function () {
 			document.querySelector('body').classList.add('no-webp');
 		}
 	});
+
+	let teamPage = document.querySelector('.team-page');
+	if(teamPage) {
+		let header = document.querySelector('.header');
+		if(header && document.documentElement.clientWidth < 768) {
+			header.classList.add('dark');
+		}
+	}
 });

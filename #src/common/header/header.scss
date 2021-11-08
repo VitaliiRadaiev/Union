@@ -11,7 +11,7 @@
         background-color: $mainColor;
     }
 
-    &.is-scrolling {
+    &:not(.menu-open).is-scrolling {
         transform: translateY(-100%);
     }
 

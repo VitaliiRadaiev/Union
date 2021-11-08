@@ -25,9 +25,13 @@
 
         burger.addEventListener('click', () => {
             menu.classList.add('open');
+            header.classList.add('menu-open');
+            document.body.classList.add('lock');
         })
         btnClose.addEventListener('click', () => {
             menu.classList.remove('open');
+            header.classList.remove('menu-open');
+            document.body.classList.remove('lock');
         })
     }
 }

@@ -33,6 +33,7 @@ window.addEventListener('load', function () {
 	@@include('../common/projects-slider/projects-slider.js');
 	@@include('../common/popup/popup.js');
 	@@include('../common/popup/popup-gallery.js');
+
 	
 	@@include('./pages/home.js');
 });
@@ -43,6 +44,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	@@include('files/dynamic_adapt.js');
+	@@include('../common/article/article.js');
 
 	function testWebP(callback) {
 
@@ -61,4 +63,12 @@ window.addEventListener('DOMContentLoaded', function () {
 			document.querySelector('body').classList.add('no-webp');
 		}
 	});
+
+	let teamPage = document.querySelector('.team-page');
+	if(teamPage) {
+		let header = document.querySelector('.header');
+		if(header && document.documentElement.clientWidth < 768) {
+			header.classList.add('dark');
+		}
+	}
 });

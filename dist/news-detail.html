@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNION</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+		
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header dark">
+    <div class="header__body container-lg">
+        <div class="header__logo logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav class="header__menu menu">
+            <div class="menu__head">
+                <div class="menu__logo">
+                    <a href="#">
+                        <img src="img/logo/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu__close">
+                    <img src="img/icons/close-white.svg" alt="">
+                </div>
+            </div>
+            <div class="menu__scroll-box">
+                <ul class="menu__list">                                
+                    <li>
+                        <a href="#" class="menu__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Team</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">News</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header__copy" data-da="menu__scroll-box,last,991.98">
+            中文 (中国)
+        </div>
+        <div class="header__burger">
+           <img src="img/icons/burger.svg" alt="">
+        </div> 
+    </div>
+</header>
+
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page article-page head-padding">
+        <section class="article">
+            <div class="container">
+                <div class="article__head">
+                    <div class="">
+                        <h2 class="article__title title-2">Beeyond The Concept Art Exhibition</h2>
+                        <div class="article__date">Posted in 2021-09-12</div>
+                    </div>
+                    <a href="#popupGallery-2" class="btn-default popup-link">See the gallery</a>
+                </div>
+                <div class="text-content">
+                    <figure>
+                        <img src="img/photo/article-img-1.jpg" alt="">
+                    </figure>
+                    <p>
+                        On Thursday, November 14, UNION and Inga Kompaniets were pleased to present an exhibition showcasing a series of selected art inspired by the shared theme of humanity.
+                    </p>
+                    <figure class="">
+                        <img src="img/photo/article-img-2.jpg" alt="">
+                        <img src="img/photo/article-img-3.jpg" alt="">
+                    </figure>
+                    <p>
+                        The goal was to bring together people of different professions to discuss important topics concerning the workplace environment and how each person defines comfort in the workplace. The key to design is to look at projects through the eyes of people who will be using the space every day. Only in understanding people’s needs can you improve your work and create vivid and functional working spaces.
+                    </p>
+                    <figure class="">
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/mlfo-lU8tXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <img src="img/photo/article-img-4.jpg" alt="">
+                    </figure>
+                    <p>
+                        Many thanks to all our guests and friends; without your tremendous support, we would never be able to make this happen!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="projects-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="projects-slider-card">
+                            <div class="projects-slider-card__bg ibg">
+                                <div class="swiper-lazy-preloader"></div>
+                                <img class="swiper-lazy" data-src="img/photo/news-img-1.jpg" alt="">
+                            </div>
+                            <div class="projects-slider-card__body">
+                                <h4 class="projects-slider-card__title">
+                                    Sacred Geometry Art Exhibition
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="projects-slider-card">
+                            <div class="projects-slider-card__bg ibg">
+                                <div class="swiper-lazy-preloader"></div>
+                                 <img class="swiper-lazy" data-src="img/photo/news-img-2.jpg" alt="">
+                            </div>
+                            <div class="projects-slider-card__body">
+                                <h4 class="projects-slider-card__title">
+                                    A Toolknit Of Interior Branding
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="projects-slider-card">
+                            <div class="projects-slider-card__bg ibg">
+                                <div class="swiper-lazy-preloader"></div>
+                                 <img class="swiper-lazy" data-src="img/photo/news-img-3.jpg" alt="">
+                            </div>
+                            <div class="projects-slider-card__body">
+                                <h4 class="projects-slider-card__title">
+                                    Generative Design In Architecture
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="projects-slider-card">
+                            <div class="projects-slider-card__bg ibg">
+                                <div class="swiper-lazy-preloader"></div>
+                                 <img class="swiper-lazy" data-src="img/photo/news-img-4.jpg" alt="">
+                            </div>
+                            <div class="projects-slider-card__body">
+                                <h4 class="projects-slider-card__title">
+                                    Beeyond The Concept Art Exhibition
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="slider-btn slider-btn-prev"></div>
+                <div class="slider-btn slider-btn-next"></div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer ">
+    <div class="footer__body container-lg">
+         <div>Copyright 2021 by ©UNION</div>
+         <div><img src="img/photo/coatofchina.png" alt=""> 浙公网安备 31010602003239号</div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+    <div class="popup gallery" id="popupGallery-1">
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img src="img/icons/close-white.svg" alt="">
+		</div>
+		<div class="popup_content">
+			
+			<div class="popup-gallery">
+				<div class="popup-gallery__slider" data-mobile="false">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-3.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-4.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-5.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="slider-btn slider-btn-prev"></div>
+						<div class="slider-btn slider-btn-next"></div>
+					</div>
+				</div>
+				<div class="popup-gallery__thumb">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-3.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-4.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-5.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup gallery" id="popupGallery-2">
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img src="img/icons/close-white.svg" alt="">
+		</div>
+		<div class="popup_content">
+			
+			<div class="popup-gallery">
+				<div class="popup-gallery__slider" data-mobile="false">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-3.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-4.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-5.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-18.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-19.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-20.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-21.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-22.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-23.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-24.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-25.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-26.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-27.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-28.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-29.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-30.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="slider-btn slider-btn-prev"></div>
+						<div class="slider-btn slider-btn-next"></div>
+					</div>
+				</div>
+				<div class="popup-gallery__thumb">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-3.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-4.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-5.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-18.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-19.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-20.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-21.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-22.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-23.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-24.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-25.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-26.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-27.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-28.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-29.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-30.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+
+</body>
+
+</html>

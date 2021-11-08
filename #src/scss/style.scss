@@ -197,6 +197,14 @@ textarea {
 	}
 }
 
+.head-padding {
+	padding-top: 100px;
+
+	@media (max-width: $md3+px) {
+		padding-top: 64px;
+	}
+}
+
 .ibg {
 	position: relative;
 	img {
@@ -215,6 +223,7 @@ textarea {
 .title-2 {
 	font-size: 44px;
 	line-height: 1.227em;
+	text-transform: uppercase;
 
 	@media (max-width: 575.98px) {
 		font-size: 24px;
@@ -223,6 +232,8 @@ textarea {
 }
 
 .title-3 {
+	font-size: 30px;
+	line-height: 1.23em;
 }
 
 .title-4 {
@@ -329,8 +340,24 @@ button.btn-default {
 	& h2 {
 	}
 	& h3 {
+		font-size: 30px;
+		line-height: 1.23em;
+		margin-bottom: 0.666em;
+
+		@media (max-width: 575.98px) {
+			font-size: 20px;
+			line-height: 24px;
+		}
 	}
 	& h4 {
+		font-size: 26px;
+		line-height: 1.23em;
+		margin-bottom: 0.76em;
+
+		@media (max-width: 575.98px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 
 	& h5 {
@@ -349,6 +376,100 @@ button.btn-default {
 	}
 
 	& figure {
+		margin-bottom: 100px;
+		margin-top: 98px;
+		@media (max-width: $md3+px) {
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:not(.multiple) {
+			& img {
+				height: 700px;
+
+				@media (max-width: $md2+px) {
+					height: 337px;
+				}
+				@media (max-width: 575.98px) {
+					height: 152px;
+				}
+			}
+		}
+
+		&:not(.iframe) {
+			@media (max-width: $md3+px) {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+
+			@media (max-width: $md4+px) {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+		}
+
+		&.multiple {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			& img {
+				flex: 0 1 calc(50% - 15px);
+				width: calc(50% - 15px);
+				margin-bottom: 30px;
+				height: 480px;
+
+				@media (max-width: $md2+px) {
+					height: 226px;
+				}
+
+				@media (max-width: $md3+px) {
+					flex: 0 1 calc(50% - 5px);
+					width: calc(50% - 5px);
+					margin-bottom: 10px;
+				}
+
+				@media (max-width: 575.98px) {
+					height: 103px;
+				}
+
+				&:nth-child(3n) {
+					flex: 0 1 100%;
+					width: 100%;
+				}
+			}
+		}
+
+		&.iframe {
+			height: 700px;
+			position: relative;
+
+			@media (max-width: $md2+px) {
+				height: 337px;
+			}
+			@media (max-width: 575.98px) {
+				height: 152px;
+			}
+
+			& iframe {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				height: 100%;
+				width: 100vw;
+				transform: translateX(-50%);
+			}
+		}
+
+		& img {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -360,10 +481,14 @@ button.btn-default {
 @import "../common/main-list/main-list";
 @import "../common/projects-slider/projects-slider";
 @import "../common/popup/popup-gallery";
+@import "../common/article/article";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 @import "pages/home";
 @import "pages/portfolio";
 @import "pages/project-detail";
+@import "pages/news";
+@import "pages/news-detail";
+@import "pages/team";
 // ==== AND PAGES =====================================================
