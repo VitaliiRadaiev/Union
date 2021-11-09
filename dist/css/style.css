@@ -2021,6 +2021,7 @@ textarea {
   width: 100%;
   z-index: 46;
   color: rgba(255, 255, 255, 0.5);
+  border: none;
 }
 
 .footer__body {
@@ -2115,9 +2116,9 @@ textarea {
 }
 
 .promo__bg img {
-  -webkit-transition: all 10s ease;
-  -o-transition: all 10s ease;
-  transition: all 10s ease;
+  -webkit-transition: all 13s linear;
+  -o-transition: all 13s linear;
+  transition: all 13s linear;
 }
 
 .promo__body {
@@ -2657,6 +2658,10 @@ textarea {
 .table table td:first-child {
   color: rgba(28, 28, 28, 0.5);
   padding-right: 15px;
+}
+
+.table table td span {
+  white-space: nowrap;
 }
 
 .team__head {
