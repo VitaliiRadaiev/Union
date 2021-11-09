@@ -415,6 +415,8 @@ let unlock = true;
 
 const timeout = 800;
 
+let closeCallbacks = {}
+
 if(popupLinks.length > 0) {
 	for (let index = 0; index < popupLinks.length; index++) {
 		const popupLink = popupLinks[index];
@@ -464,6 +466,12 @@ function popupClose(popupActive, doUnlock = true) {
 			bodyUnlock();
 		}
 	}
+	if(popupActive.id) {
+		if(closeCallbacks[popupActive.id]) {
+			closeCallbacks[popupActive.id]();
+		}
+	}
+
 }
 
 function bodyLock() {
@@ -547,7 +555,55 @@ document.addEventListener('keydown', function(e) {
 				Element.prototype.mozMatchesSelector;
 		}
 	})();
-// === AND Polyfill ===;
+// === AND Polyfill ===
+
+
+let allPopup = document.querySelectorAll('.popup');
+if(allPopup.length) {
+	const setScrollBoxHeight = (head, box) => {
+		box.style.maxHeight = (document.documentElement.clientHeight - head.clientHeight) + 'px';
+	}
+	allPopup.forEach(popup => {
+		let head = popup.querySelector('.popup-head');
+		let scrollBox = popup.querySelector('.popup-scroll-wrap');
+		if(head && scrollBox) {
+			setScrollBoxHeight(head, scrollBox);
+			window.addEventListener('resize', () => setScrollBoxHeight(head, scrollBox));
+
+			scrollBox.addEventListener('scroll', () => {
+				scrollBox.classList.toggle('is-scroll', scrollBox.scrollTop > 30);
+			})
+		}
+	})
+}
+
+window.popup = (() => {
+	return {
+		open(id) {
+			if(!id) return;
+			
+			let popup = document.querySelector(id);
+
+			if(!popup) return; 
+
+			popupOpen(popup);
+		}, 
+		close(id) {
+			if(!id) return;
+			
+			let popup = document.querySelector(id);
+
+			if(!popup) return;
+
+			popupClose(popup);
+		},
+		addEvent(event, popupId, callback) {
+			if(event === 'close') {
+				closeCallbacks[popupId] = callback;
+			}
+		} 
+	}
+})();
 	{
     let popupGalleryAll = document.querySelectorAll('.popup-gallery');
     if (popupGalleryAll.length) {
@@ -615,6 +671,96 @@ document.addEventListener('keydown', function(e) {
 
         })
     }
+};
+	function videoHandler(videoBLock) {
+	if(!videoBLock) return;
+	let video = videoBLock.querySelector('.video__payer');
+	let playBtn = videoBLock.querySelector('.video__play');
+	let pauseBtn = videoBLock.querySelector('.video__pause');
+
+	let playEventsCallback = [];
+	let pauseEventsCallback = [];
+
+	const togglePlayPause = (play) => {
+		if(play) {
+			video.play();
+			video.setAttribute('controls', true)
+			playBtn.style.display = 'none';
+			pauseBtn.style.display = 'block';
+
+			if(playEventsCallback.length) {
+				playEventsCallback.forEach(callback => {
+					callback();
+				})
+			}
+		} else {
+			video.pause();
+			video.removeAttribute('controls');
+			playBtn.style.display = 'block';
+			pauseBtn.style.display = 'none';
+
+			if(pauseEventsCallback.length) {
+				pauseEventsCallback.forEach(callback => {
+					callback();
+				})
+			}
+		}
+	}
+
+	video.addEventListener('ended', () => {
+		togglePlayPause(false);
+	});
+
+	video.addEventListener('play', () => {
+		togglePlayPause(true);
+	});
+	video.addEventListener('pause', () => {
+		playBtn.style.display = 'block';
+		pauseBtn.style.display = 'none';
+	});
+
+	video.addEventListener('mouseenter', (e) => { 
+		if(!video.paused) {
+			pauseBtn.style.opacity = '1';
+		} 
+	});
+	video.addEventListener('mouseleave', (e) => { 
+		if(!video.paused) {
+			pauseBtn.style.opacity = '0';
+		} 
+	});
+
+	playBtn.addEventListener('click', () => {
+		togglePlayPause(true);
+	})
+	pauseBtn.addEventListener('click', () => {
+		togglePlayPause(false);
+	})
+
+	return {
+		block: videoBLock,
+		play() {
+			togglePlayPause(true);
+		},
+		pause() {
+			togglePlayPause(false);
+		},
+		subscribe(string, callback) {
+			if(string === 'play') {
+				playEventsCallback.push(callback);
+			} else if (string === 'pause') {
+				pauseEventsCallback.push(callback);
+			}
+		}
+	}
+
+}
+
+let videoAll = document.querySelectorAll('.video');
+if(videoAll.length) {
+	videoAll.forEach(video => {
+		videoHandler(video)
+	})
 };
 
 	

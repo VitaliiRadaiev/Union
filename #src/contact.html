@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "UNION"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{
+    "dark": "dark"
+    })
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page contact-page head-padding">
+        <section class="contact">
+            <div class="contact__head">
+                <div class="contact__head-body container-lg">
+                    <div class="contact-info">
+                        <div class="contact-info__item">
+                            <a href="mailto:">info@union-architect.com</a>
+                            <div class="contact-info__label">Email</div>
+                        </div>
+                        <div class="contact-info__item">
+                            <div class="contact-info__label">WeChat</div>
+                            <div class="contact-info__img">
+                                <img src="img/photo/QR.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__map ibg">
+                <img src="img/photo/map.jpg" alt="">
+            </div>
+
+            <form action="#" class="contact-form container">
+                <h2 class="contact-form__title title-2">Feedback</h2>
+                <div class="contact-form__items">
+                    <div class="contact-form__item">
+                        <input type="text" class="input" placeholder="Name*">
+                    </div>
+                    <div class="contact-form__item">
+                        <input type="email" class="input" placeholder="Email*">
+                    </div>
+                    <div class="contact-form__item">
+                        <input type="text" class="input" placeholder="Phone">
+                    </div>
+                    <div class="contact-form__item width-100">
+                        <input type="text" class="input" placeholder="Text*">
+                    </div>
+                </div>
+                <button class="btn-default">Send message</button>
+            </form>
+
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{
+    "fixed": ""
+    })
+    <!-- == // FOOTER ================== -->
+    @@include('common/popup/_popupMessage.html')
+    @@include('_js-bottom.html')
+
+</body>
+
+</html>

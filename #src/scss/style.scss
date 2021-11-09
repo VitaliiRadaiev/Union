@@ -295,6 +295,21 @@ button.btn-default {
 // === and btn ========================================================================
 
 .input {
+	height: 50px;
+	border-bottom: 1px solid #1c1c1c;
+	font-size: 16px;
+	line-height: 1.2em;
+	color: $textColor;
+	width: 100%;
+
+	&::placeholder {
+		color: #a5a5a5;
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 14px;
+		height: 39px;
+	}
 }
 
 .textarea {
@@ -482,6 +497,7 @@ button.btn-default {
 @import "../common/projects-slider/projects-slider";
 @import "../common/popup/popup-gallery";
 @import "../common/article/article";
+@import "../common/video/video";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -491,4 +507,6 @@ button.btn-default {
 @import "pages/news";
 @import "pages/news-detail";
 @import "pages/team";
+@import "pages/about";
+@import "pages/contact";
 // ==== AND PAGES =====================================================
