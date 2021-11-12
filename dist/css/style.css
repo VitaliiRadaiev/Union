@@ -1861,6 +1861,26 @@ textarea {
           transform: translateX(-50%);
 }
 
+.text-content figure._video {
+  height: 700px;
+  position: relative;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.text-content figure._video video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 100vw;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .text-content figure img {
   display: block;
   -o-object-fit: cover;
@@ -3171,6 +3191,10 @@ textarea {
     height: 337px;
   }
 
+  .text-content figure._video {
+    height: 337px;
+  }
+
   .header__copy {
     font-size: 16px;
     line-height: 22px;
@@ -3545,6 +3569,10 @@ textarea {
   }
 
   .text-content figure.iframe {
+    height: 152px;
+  }
+
+  .text-content figure._video {
     height: 152px;
   }
 

@@ -141,7 +141,7 @@ defer
                     </p>
 
                     <figure class="">
-                        <div class="video">
+                        <!-- <div class="video">
                             <video class="video__payer" playsinline 
                                 crossorigin="anonymous" preload="false"
                                 poster="img/photo/about-img-2.jpg">
@@ -155,7 +155,13 @@ defer
                                     <img src="img/icons/pause.svg" alt="play" >
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <video class="promo-header__video" autoplay muted="true" playsinline controlslist="nodownload"
+                            crossorigin="anonymous" loop="" preload="auto" muted="true"
+                            poster="img/photo/about-img-2.jpg">
+                            <source media="(max-width:992px)" src="img/video1.mpx" type="video/mp4">
+                            <source src="img/video1.mp4" type="video/mp4">
+                        </video>
                     </figure>
 
                     <p>
@@ -168,21 +174,12 @@ defer
                     </p>
 
                     <figure class="">
-                        <div class="video">
-                            <video class="video__payer" playsinline 
-                                crossorigin="anonymous" preload="false"
-                                poster="img/photo/about-img-3.jpg">
-                                <source src="img/video2.mp4" type="video/mp4">
-                            </video>
-                            <div class="video__control">
-                                <div class="video__play">
-                                    <img src="img/icons/play.svg" alt="play" >
-                                </div>
-                                <div class="video__pause">
-                                    <img src="img/icons/pause.svg" alt="play" >
-                                </div>
-                            </div>
-                        </div>
+                        <video class="promo-header__video" autoplay muted="true" playsinline controlslist="nodownload"
+                            crossorigin="anonymous" loop="" preload="auto" muted="true"
+                            poster="img/photo/about-img-3.jpg">
+                            <source media="(max-width:992px)" src="img/video2.mpx" type="video/mp4">
+                            <source src="img/video2.mp4" type="video/mp4">
+                        </video>
                     </figure>
 
                     <p>
@@ -191,7 +188,8 @@ defer
                         enhancing transparency and efficiency.
                     </p>
                     <p>
-                        We use one central model for producing construction drawings, simulations, renderings and quotations.
+                        We use one central model for producing construction drawings, simulations, renderings and
+                        quotations.
                     </p>
                 </div>
             </div>

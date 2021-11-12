@@ -479,6 +479,30 @@ button.btn-default {
 			}
 		}
 
+		&._video {
+			height: 700px;
+			position: relative;
+			border-top: 1px solid #E8E8E8;
+			border-bottom: 1px solid #E8E8E8;
+
+			@media (max-width: $md2+px) {
+				height: 337px;
+			}
+			@media (max-width: 575.98px) {
+				height: 152px;
+			}
+
+			& video {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				height: 100%;
+				width: 100vw;
+				transform: translateX(-50%);
+				object-fit: cover;
+			}
+		}
+
 		& img {
 			display: block;
 			object-fit: cover;
